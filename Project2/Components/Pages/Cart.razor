@@ -1,0 +1,118 @@
+﻿@page "/Cart"
+
+<PageTitle>Cart</PageTitle>
+<div id="container">
+<div id="header">
+    <img src="images/PizzaHAL-Banner.jpg" width="1200px" height="150px" alt="Logo" />
+</div>
+<div id="nav">
+			<ul>
+				<li><a href="">Home </a></li>
+				<li><a href="Pizza"> Pizza </a></li>
+				<li><a href="VeggiePizza"> Veggie-Pizza </a></li>
+				<li><a href="Drinks"> Drinks </a></li>
+				<li><a href="Sandwiches"> Sandwiches </a></li>
+				<li><a href="Soup"> Soup </a></li>
+			<li><a href="Dessert">Dessert</a></li>
+			<li><a href="Cart">Cart </a></li>
+			<li><a href="Checkout">Checkout </a></li>
+			</ul>
+</div>
+<h1>Your Cart:</h1>
+
+@if(Home.Pizzas.Count > 0)
+{
+	<table>
+		<h3>Pizzas:</h3>
+		<tbody>
+			@for (int i = 0; i < Home.Pizzas.Count; i++)
+			{
+				<tr>
+					<td>@Home.Pizzas[i].Size</td>
+					<td>-</td>
+					<td>@Home.Pizzas[i].ToppingChoice</td>
+					<td>  |  </td>
+					<td>$@Home.Pizzas[i].Price</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+@if (Home.Drinks.Count > 0)
+{
+	<table>
+		<h3>Drinks:</h3>
+		<tbody>
+			@for (int i = 0; i < Home.Drinks.Count; i++)
+			{
+				<tr>
+					<td>@Home.Drinks[i].Size</td>
+					<td>-</td>
+					<td>@Home.Drinks[i].Type</td>
+					<td>  |  </td>
+					<td>$@Home.Drinks[i].Price </td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+@if (Home.Sandwiches.Count > 0)
+{
+	<table>
+		<h3>Sandwiches:</h3>
+		<tbody>
+			@for (int i = 0; i < Home.Sandwiches.Count; i++)
+			{
+				<tr>
+					<td>@Home.Sandwiches[i].Type</td>
+					<td>  |  </td>
+					<td>$@Home.Sandwiches[i].Price</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+@if (Home.Soups.Count > 0)
+{
+	<table>
+		<h3>Soups:</h3>
+		<tbody>
+			@for (int i = 0; i < Home.Soups.Count; i++)
+			{
+				<tr>
+					<td>@Home.Soups[i].Type</td>
+					<td>  |  </td>
+					<td>$@Home.Soups[i].Price</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+@if(Home.Desserts.Count > 0)
+{
+<table>
+	<h3>Desserts:</h3>
+	<tbody>
+			@for (int i = 0; i < Home.Desserts.Count; i++)
+			{
+				<tr>
+					<td>@Home.Desserts[i].Type </td>
+					<td>  |  </td>
+					<td>$@Home.Desserts[i].Price</td>
+				</tr>
+			}
+	</tbody>
+</table>
+}
+<p></p>
+<p></p>
+<h3>Your Running Total:</h3>
+<h2>$@SubTotal</h2>
+
+</div>
+
+

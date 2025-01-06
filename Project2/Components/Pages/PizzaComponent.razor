@@ -1,0 +1,57 @@
+﻿@page "/Pizza"
+
+<PageTitle>Pizza</PageTitle>
+<div id="container">
+<div id="header">
+    <img src="images/PizzaHAL-Banner.jpg" width="1200px" height="150px" alt="Logo" />
+</div>
+<div id="nav">
+			<ul>
+				<li><a href="">Home </a></li>
+				<li><a href="Pizza"> Pizza </a></li>
+				<li><a href="VeggiePizza"> Veggie-Pizza </a></li>
+				<li><a href="Drinks"> Drinks </a></li>
+				<li><a href="Sandwiches"> Sandwiches </a></li>
+				<li><a href="Soup"> Soup </a></li>
+			<li><a href="Dessert">Dessert</a></li>
+			<li><a href="Cart">Cart </a></li>
+			<li><a href="Checkout">Checkout </a></li>
+			</ul>
+</div>
+<div id="image">
+		<img src="images/Pizza-Menu.jpg" width="1200" height="600" alt="Logo" />
+</div>
+	<h1>Create Your Pizza</h1>
+<div>
+	<label>Size:</label>
+	<select @bind="PizzaSize" style="width:400px">
+		<option>Select Size</option>
+		<option>Small</option>
+		<option>Medium</option>
+		<option>Large</option>
+		<option>Ex-Large</option>
+	</select>
+</div>
+
+<div id="selection">
+	<label>Topping:</label>
+	<select @bind="PizzaTopping" style="width:400px">
+		<option>Make a Selection</option>
+		<option>None</option>
+		<option>Pepperoni</option>
+		<option>Bacon</option>
+		<option>Sausage</option>
+		<option>Peppers</option>
+		<option>Pineapple</option>
+		<option>Mushrooms</option>
+
+		</select>
+</div>
+
+@if(PizzaTopping != null && PizzaSize != null)
+{
+	<button @onclick="CreatePizza"><a href="Cart">Add To Cart</a></button>
+}
+</div>
+
+

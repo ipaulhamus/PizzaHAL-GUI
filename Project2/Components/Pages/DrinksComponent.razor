@@ -1,0 +1,65 @@
+﻿@page "/Drinks"
+
+<PageTitle>Drinks</PageTitle>
+<div id="container">
+<div id="header">
+    <img src="images/PizzaHAL-Banner.jpg" width="1200px" height="150px" alt="Logo" />
+</div>
+<div id="nav">
+			<ul>
+				<li><a href="">Home </a></li>
+				<li><a href="Pizza"> Pizza </a></li>
+				<li><a href="VeggiePizza"> Veggie-Pizza </a></li>
+				<li><a href="Drinks"> Drinks </a></li>
+				<li><a href="Sandwiches"> Sandwiches </a></li>
+				<li><a href="Soup"> Soup </a></li>
+			<li><a href="Dessert">Dessert</a></li>
+			<li><a href="Cart">Cart </a></li>
+			<li><a href="Checkout">Checkout </a></li>
+			</ul>
+</div>
+<div id="image">
+		<img src="images/Drink-Menu.jpg" width="1200" height="600" alt="Logo" />
+</div>
+	<h1>Select Your Drink</h1>
+<div>
+	<label>Size:</label>
+	<select @bind="DrinkSize" style="width:400px">
+		<option>Select a Size</option>
+		<option>Small</option>
+		<option>Medium</option>
+		<option>Large</option>
+	</select>
+</div>
+
+<div id="selection">
+	<label>Type:</label>
+	<select @bind="DrinkType" style="width:400px">
+		<option>Select a Type</option>
+		<option>Dr. Dynamite</option>
+		<option>Dr. Thunder</option>
+		<option>Lemon Lime</option>
+		<option>Mt. Lightning</option>
+		<option>Mr. Pibb</option>
+		<option>7 Dew</option>
+
+		</select>
+</div>
+
+<div>
+	<label>Ice:</label>
+	<select @bind="DrinkIce" style="width:400px">
+		<option>Select Your Ice Amount</option>
+		<option>None</option>
+		<option>Regular</option>
+		<option>Extra</option>
+	</select>
+</div>
+
+@if(DrinkSize != null && DrinkType != null && DrinkIce != null)
+{
+	<button @onclick="CreateDrink"><a href="Cart">Add To Cart</a></button>
+}
+</div>
+
+

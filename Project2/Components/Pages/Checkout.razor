@@ -1,0 +1,48 @@
+﻿@page "/Checkout"
+
+<PageTitle>Checkout</PageTitle>
+<div id="container">
+<div id="header">
+    <img src="images/PizzaHAL-Banner.jpg" width="1200px" height="150px" alt="Logo" />
+</div>
+<div id="nav">
+			<ul>
+				<li><a href="">Home </a></li>
+				<li><a href="Pizza"> Pizza </a></li>
+				<li><a href="VeggiePizza"> Veggie-Pizza </a></li>
+				<li><a href="Drinks"> Drinks </a></li>
+				<li><a href="Sandwiches"> Sandwiches </a></li>
+				<li><a href="Soup"> Soup </a></li>
+			<li><a href="Dessert">Dessert</a></li>
+			<li><a href="Cart">Cart </a></li>
+			<li><a href="Checkout">Checkout </a></li>
+			</ul>
+</div>
+<h1>Checkout</h1>
+
+<h3>Would you like to get delivery? ($8 Fee)</h3>
+
+<div>
+	<label>Your Selection:</label>
+	<select @bind="TakeoutValidation">
+		<option>Your Choice</option>
+		<option>No</option>
+		<option>Yes</option>
+	</select>
+</div>
+
+@if(TakeoutValidation != null)
+{
+		<button @onclick="CalculateTotal">Checkout</button>
+		@if(CheckedOut == true)
+		{
+			<h3>Your Final Total:</h3>
+			<h2>$@FinalTotal</h2>
+			<h3>Thank you for shopping at PizzaHaL! Come again!</h3>
+		}
+
+}
+
+</div>
+
+

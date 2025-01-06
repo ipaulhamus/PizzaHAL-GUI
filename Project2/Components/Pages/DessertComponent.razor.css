@@ -1,0 +1,105 @@
+﻿@charset "utf-8";
+
+body 
+{
+    background-color: grey;
+}
+
+#container {
+    margin: 0px auto;
+    width: 1200px;
+    height: 1300px;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    background-color: bisque;
+}
+
+#header
+{
+    width: 1200px;
+    height: 150px;
+}
+
+#nav
+{
+    width: 1200px;
+    height: 75px;
+    background-color: bisque;
+}
+
+#nav ul 
+{
+    margin: auto;
+        text-align: center;
+        list-style-type: none;
+        margin: 0px;
+        padding-left: 100px;
+}
+
+#nav ul li 
+{
+     font-size: 27px;
+     float: left;
+     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+     font-weight: bold;
+}
+
+#nav ul li a 
+{
+     display: block;
+     text-decoration: none;
+     padding: 5px 5px;
+     margin: 5px 5px;
+     color: #BF1304;
+}
+
+#nav ul li a:hover {
+     color: lightcoral;
+}
+
+#selection
+{
+
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #BF1304;
+    margin-left:360px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+select
+{
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+h1
+{
+    font-weight: bold;
+    color: green;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+button
+{
+    margin-top: 15px;
+    margin-left: 510px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+
+}
+
+button a
+{
+    color: white;
+    text-decoration: none;
+}
